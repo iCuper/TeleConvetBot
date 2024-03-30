@@ -35,7 +35,7 @@ def convert(message: telebot.types.Message):
         bot.reply_to(message, f'Не удалось обработать команду\n{e}')
     else:
         total = convert_obj * float(amount)
-        bot.send_message(message.chat.id, f'Цена {base} в {quote} = {round(total, 2)}')
+        bot.send_message(message.chat.id, f'Цена {base} в {quote} = {total}')
 
 
 bot.polling()
